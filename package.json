@@ -1,0 +1,16 @@
+{
+  "name": "musicassistantbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Horvald",
+  "license": "ISC",
+  "dependencies": {
+    "custom-env": "^1.0.1",
+    "firebase": "^6.0.2",
+    "telegraf": "^3.29.0"
+  }
+}
