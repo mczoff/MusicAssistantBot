@@ -20,4 +20,4 @@ const markup = Extra
         m.callbackButton('Back to menu', '!back'),
     ], { columns: 3 }))
 
-module.exports = markup;
+module.exports = markup

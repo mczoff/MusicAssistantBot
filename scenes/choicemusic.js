@@ -38,28 +38,55 @@ const superWizard = new WizardScene('pickupmusic',
                 return ctx.scene.leave()
             });
     },
-    (ctx) => {
-        validateAnswer(ctx)
-            .then(function (data)
+    async (ctx) => {
+        await validateAnswer(ctx)
+            .then(async function (data)
             {
                 ctx.session.character = data;
-                console.log(ctx.session)
+
+                const resultMusic = []
+
+                const fbValMusics = await database.database().ref('musics').once('value')
+                const musics = fbValMusics.val()
+
+                const fbValMusicRates = await database.database().ref('rates').once('value')
+                const musicRates = fbValMusicRates.val()
+
+                Object.keys(musics).forEach(key => {
+                    const rateKey = Object.keys(musicRates).find(t => musicRates[t].musicId === key)
+                    resultMusic.push({
+                        name: musics[key].name,
+                        character: musics[key].character,
+                        mood: musics[key].mood,
+                        genre: musics[key].genre,
+                        rate: musicRates[rateKey].value
+                    });
+                });
+
+                ctx.session.musics = resultMusic
+
+                ctx.editMessageText(`I can offer you ${resultMusic.length} song(s) according to your preferences`, markups.Preview)
                 return ctx.scene.leave()
             })
             .catch(function (err) {
-                ctx.reply(err)
+                console.log(err)
                 return ctx.scene.leave()
             });
 
-    }
+    },
 )
 
 function validateAnswer (ctx) {
     return new Promise(function (resolve, reject) {
         if(ctx.update.callback_query == null)
+        {
+            console.log(ctx.update.callback_query == null)
             reject('You must click on inline button! Repeat all steps again! Write /start');
+        }
         else
-            resolve(ctx.update.callback_query.data);
+        {
+            resolve(ctx.update.callback_query);
+        }
     })
 }
 

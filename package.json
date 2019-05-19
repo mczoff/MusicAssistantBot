@@ -9,7 +9,7 @@
   "author": "Robert Horvald",
   "license": "ISC",
   "dependencies": {
-    "custom-env": "^1.0.1",
+    "dotenv": "^8.0.0",
     "firebase": "^6.0.2",
     "telegraf": "^3.29.0"
   }

@@ -4,10 +4,12 @@ const Telegraf = require('telegraf'),
     session = require('telegraf/session'),
     Stage = require('telegraf/stage'),
     MusicAssistantBot = require('./config')
+    dotenv = require('dotenv')
 
-require ('custom-env').env('botconfig')
+
+dotenv.config()
 const bot = new Telegraf(process.env.BOT_TOKEN)
-const stage = new Stage([MusicAssistantBot.Scenes.ChoiceMusic])
+const stage = new Stage([MusicAssistantBot.Scenes.ChoiceMusic, MusicAssistantBot.Scenes.AddMusic])
 
 bot.use(session({ ttl: 10 }))
 bot.use(stage.middleware())
