@@ -57,9 +57,13 @@ const superWizard = new WizardScene('pickupmusic',
                     resultMusic.push({
                         name: musics[key].name,
                         character: musics[key].character,
+                        description: musics[key].description,
                         mood: musics[key].mood,
                         genre: musics[key].genre,
-                        rate: musicRates[rateKey].value
+                        rate: {
+                            id: rateKey,
+                            value: musicRates[rateKey].value
+                        }
                     });
                 });
 
