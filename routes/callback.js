@@ -71,8 +71,14 @@ callbackRouter.on('next', (ctx) => {
     ctx.session.indexMusics += 1
     const music = ctx.session.musics[ctx.session.indexMusics];
 
+    console.log(music == null)
+
     if(music == null)
-        ctx.reply('Next music was empty', markup.View)
+    {
+        ctx.reply('Next music was empty')
+        return;
+    }
+
 
     ctx.reply(`Name: ${music.name}\nDescription: ${music.description}\nGenre: ${music.genre}\nCharacter: ${music.character}\nMood: ${music.mood}\nRate: ${music.rate.value}`, markup.View)
 })

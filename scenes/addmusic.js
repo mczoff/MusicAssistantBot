@@ -108,7 +108,6 @@ const superWizard = new WizardScene('addmusic',
                 ctx.reply(err)
                 return ctx.scene.leave()
             });
-
     },
 )
 

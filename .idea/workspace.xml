@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/callback.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+            <state relative-caret-position="396">
+              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -67,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scenes/addmusic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="-207">
+              <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -94,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scenes/choicemusic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="41" column="17" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="460">
+              <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -137,9 +137,9 @@
         <option value="$PROJECT_DIR$/scenes/index.js" />
         <option value="$PROJECT_DIR$/markups/menu.js" />
         <option value="$PROJECT_DIR$/markups/view.js" />
+        <option value="$PROJECT_DIR$/scenes/addmusic.js" />
         <option value="$PROJECT_DIR$/routes/callback.js" />
         <option value="$PROJECT_DIR$/scenes/choicemusic.js" />
-        <option value="$PROJECT_DIR$/scenes/addmusic.js" />
       </list>
     </option>
   </component>
@@ -227,18 +227,17 @@
       <workItem from="1558212539373" duration="594000" />
       <workItem from="1558277858046" duration="2843000" />
       <workItem from="1558365038684" duration="166000" />
-      <workItem from="1558986368282" duration="1081000" />
+      <workItem from="1558986368282" duration="4111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36273000" />
+    <option name="totallyTimeSpent" value="39303000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49913645" visible="true" weight="0.12802951" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913645" visible="true" weight="0.12802951" />
       <window_info id="Structure" order="1" sideWeight="0.50086355" side_tool="true" weight="0.2646421" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -251,7 +250,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3291714" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4978308" visible="true" weight="0.33667782" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4978308" visible="true" weight="0.2419175" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021692" side_tool="true" weight="0.34279227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -393,22 +392,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/callback.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scenes/choicemusic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="41" column="17" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="41" selection-end-column="17" />
+        <state relative-caret-position="396">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scenes/addmusic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="-207">
+          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/choicemusic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="17" />
         </state>
       </provider>
     </entry>
