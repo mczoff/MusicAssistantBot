@@ -16,6 +16,12 @@ const superWizard = new WizardScene('pickupmusic',
         validateAnswer(ctx)
             .then(function (data)
             {
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
                 ctx.session.mood = data
                 ctx.editMessageText('Question 2. Choice genre your favourite music', markups.Genre)
                 return ctx.wizard.next()
@@ -29,6 +35,12 @@ const superWizard = new WizardScene('pickupmusic',
         validateAnswer(ctx)
             .then(function (data)
             {
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
                 ctx.session.genre = data
                 ctx.editMessageText('Question 3. Choice your type character', markups.Character)
                 return ctx.wizard.next()
@@ -42,6 +54,12 @@ const superWizard = new WizardScene('pickupmusic',
         await validateAnswer(ctx)
             .then(async function (data)
             {
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
                 ctx.session.character = data;
 
                 const resultMusic = []

@@ -34,6 +34,12 @@ const superWizard = new WizardScene('addmusic',
         validateAnswer(ctx)
             .then(function (data)
             {
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
                 ctx.session.mood = data
                 ctx.editMessageText('Question 3. Choice genre music', markups.Genre)
                 return ctx.wizard.next()
@@ -47,6 +53,12 @@ const superWizard = new WizardScene('addmusic',
         validateAnswer(ctx)
             .then(function (data)
             {
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
                 ctx.session.genre = data
                 ctx.editMessageText('Question 4. Choice character music', markups.Character)
                 return ctx.wizard.next()
@@ -59,6 +71,12 @@ const superWizard = new WizardScene('addmusic',
         await validateAnswer(ctx)
             .then(async function (data)
             {
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
                 ctx.session.character = data;
 
                 database.database().ref('musics').push({
