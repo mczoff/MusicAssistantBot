@@ -16,7 +16,13 @@ const superWizard = new WizardScene('pickupmusic',
         validateAnswer(ctx)
             .then(function (data)
             {
-                ctx.session.mood = data
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
+                ctx.session.mood = data.data
                 ctx.editMessageText('Question 2. Choice genre your favourite music', markups.Genre)
                 return ctx.wizard.next()
             })
@@ -29,7 +35,13 @@ const superWizard = new WizardScene('pickupmusic',
         validateAnswer(ctx)
             .then(function (data)
             {
-                ctx.session.genre = data
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
+                ctx.session.genre = data.data
                 ctx.editMessageText('Question 3. Choice your type character', markups.Character)
                 return ctx.wizard.next()
             })
@@ -42,7 +54,13 @@ const superWizard = new WizardScene('pickupmusic',
         await validateAnswer(ctx)
             .then(async function (data)
             {
-                ctx.session.character = data;
+                if(data.data === '!back')
+                {
+                    ctx.reply("You was returned to menu!", markups.Menu)
+                    return ctx.scene.leave()
+                }
+
+                ctx.session.character = data.data;
 
                 const resultMusic = []
 
@@ -67,9 +85,20 @@ const superWizard = new WizardScene('pickupmusic',
                     });
                 });
 
-                ctx.session.musics = resultMusic
 
-                ctx.editMessageText(`I can offer you ${resultMusic.length} song(s) according to your preferences`, markups.Preview)
+                const sessionMusic = resultMusic.filter(function (item) {
+                    return item.mood == ctx.session.mood || item.character == ctx.session.character || item.genre == ctx.session.genre
+                })
+
+                ctx.session.musics = sessionMusic
+
+                if(sessionMusic.length == 0)
+                {
+                    ctx.editMessageText(`I cant offer you songs according to your preferences`, markups.Menu)
+                    return;
+                }
+
+                ctx.editMessageText(`I can offer you ${sessionMusic.length} song(s) according to your preferences`, markups.Preview)
                 return ctx.scene.leave()
             })
             .catch(function (err) {
